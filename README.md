@@ -1,10 +1,10 @@
 <center><h1>Face Mesh Classification using MediaPipe and Custom CNN</h1></center>
 
-<center><h2>📌 Overview</h2></center>
+<center><h2>Overview</h2></center>
 
-<p>This project utilizes MediaPipe to extract face mesh landmarks from facial images and trains a custom CNN model to classify them. Initially, the model performed poorly (~60% accuracy). Upon experimenting, I discovered that reversing the landmark rendering from black points on a white background to white points on a black background significantly improved model performance, boosting accuracy to 82%. This improvement is attributed to better feature extraction through the use of MaxPooling2D.</p>
+<p>This project focuses on classifying facial features by leveraging MediaPipe's face mesh capabilities. A custom convolutional neural network (CNN) was built and trained on landmark-based image data. The model was designed to be efficient and adaptable for real-time or batch face analysis tasks.</p>
 
-<center><h2>📁 Dataset Preparation</h2></center>
+<center><h2>Dataset Preparation</h2></center>
 
 <p>I created a custom dataset by extracting face mesh landmarks using MediaPipe and rendering them onto 96x96 images. The dataset is organized in the following format:</p>
 
@@ -22,7 +22,7 @@ face_mesh_dataset/
 
 <p>Each image shows facial landmarks either as black points on white background (initial) or white points on black background (improved version).</p>
 
-<center><h2>🛠 Dependencies</h2></center>
+<center><h2>Dependencies</h2></center>
 
 <p>Install required packages using pip:</p>
 
@@ -30,7 +30,7 @@ face_mesh_dataset/
 pip install mediapipe opencv-python tensorflow numpy matplotlib scikit-learn
 </pre>
 
-<center><h2>🚀 How to Use</h2></center>
+<center><h2>How to Use</h2></center>
 
 <ol>
 <li><b>Mount Google Drive</b> (if using Colab):</li>
@@ -125,13 +125,13 @@ plt.show()
 </pre>
 </ol>
 
-<center><h2>🔍 Key Insight</h2></center>
+<center><h2>Key Insight</h2></center>
 
 <p>Originally, I visualized landmarks as black dots on a white canvas. However, this setup caused the model to struggle with feature extraction due to how MaxPooling works—pooling large dark (zero) regions resulted in lost feature clarity.</p>
 
 <p>Switching to white dots on a black canvas helped MaxPooling2D highlight key facial features better, thereby improving training efficiency and increasing test accuracy from 60% to 82%.</p>
 
-<center><h2>📈 Results</h2></center>
+<center><h2>Results</h2></center>
 
 <ul>
   <li>Final Training Accuracy: ~82%</li>
@@ -140,7 +140,7 @@ plt.show()
   <li>Loss: Sparse Categorical Crossentropy</li>
 </ul>
 
-<center><h2>📬 Contact</h2></center>
+<center><h2>Contact</h2></center>
 
 <p>Created by Joel Alex John<br>
-For questions or collaborations, reach out via <a href="https://www.linkedin.com/in/joel-alex-john/">LinkedIn</a> or <a href="https://github.com/JoelAlexJohn">GitHub</a></p>
+For questions or collaborations, connect on <a href="https://www.linkedin.com/in/joelalexj/">LinkedIn</a></p>
