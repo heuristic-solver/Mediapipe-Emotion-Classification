@@ -2,7 +2,7 @@
 
 <center><h2>Overview</h2></center>
 
-<p>This project focuses on classifying facial features by leveraging MediaPipe's face mesh capabilities. A custom convolutional neural network (CNN) was built and trained on landmark-based image data. The model was designed to be efficient and adaptable for real-time or batch face analysis tasks.</p>
+<p>This project focuses on classifying facial features by using MediaPipe's face mesh capabilities. A custom convolutional neural network (CNN) was built and trained on landmark-based image data. The model was designed to be efficient and adaptable for real-time or batch face analysis tasks.</p>
 
 <center><h2>Dataset Preparation</h2></center>
 
